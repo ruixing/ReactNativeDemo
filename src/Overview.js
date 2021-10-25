@@ -6,7 +6,7 @@ const App = () => (
     <View style={styles.pageTitleContainer}>
       <Text
         numberOfLines={1}
-        style={styles.pageTitle}
+        style={[ styles.textLevelOne, styles.pageTitle ]}
       >
         app-debug.apk' on 'Nexus_6P_API_29(AVD) - 10' for app:debugpp:debug
       </Text>
@@ -21,7 +21,7 @@ const App = () => (
     <View style={styles.middleTextContainer}>
       <Text
         numberOfLines={3}
-        style={styles.middleText}
+        style={[ styles.textLevelOne, styles.middleText ]}
       >
         app-debug. for app app-debug.apk' on 'Nexus_6P_API_29(AVD) - 10' for app:debugpp:debug
       </Text>
@@ -34,13 +34,13 @@ const App = () => (
       />
       <Text
         numberOfLines={1}
-        style={styles.textLevelTwo}
+        style={[ styles.textLevelOne, styles.listTextTitle ]}
       >
         app-debug. for app
       </Text>
       <Text
         numberOfLines={3}
-        style={styles.textLevelThree}
+        style={styles.textLevelTwo}
       >
         HKD500,000 life cover for as low as HKD 0,7* per day *Based on a non-smoker female aged 20 (age next birthday)
       </Text>
@@ -53,13 +53,13 @@ const App = () => (
       />
       <Text
         numberOfLines={1}
-        style={styles.textLevelTwo}
+        style={[ styles.textLevelOne, styles.listTextTitle ]}
       >
         app-debug. for app
       </Text>
       <Text
         numberOfLines={3}
-        style={styles.textLevelThree}
+        style={styles.textLevelTwo}
       >
         HKD500,000 life cover for as low as HKD 0,7* per day *Based on a non-smoker female aged 20 (age next birthday)
       </Text>
@@ -67,13 +67,13 @@ const App = () => (
     <View style={styles.footerContainer}>
       <Text
         numberOfLines={1}
-        style={styles.textLevelTwo}
+        style={[ styles.textLevelOne, styles.listTextTitle ]}
       >
         note
       </Text>
       <Text
         numberOfLines={3}
-        style={styles.textLevelThree}
+        style={styles.textLevelTwo}
       >
         HKD500,000 life cover for as low as HKD 0,7* per day *Based on a non-smoker female aged 20 (age next birthday)
       </Text>
@@ -81,13 +81,13 @@ const App = () => (
     <View style={[ styles.footerContainer, styles.footerLink ]}>
       <Text
         numberOfLines={1}
-        style={[ styles.textLevelThree, styles.linkItem ]}
+        style={[ styles.textLevelTwo, styles.linkItem ]}
       >
         Product Brochure
       </Text>
       <Text
         numberOfLines={1}
-        style={[ styles.textLevelThree, styles.linkItem ]}
+        style={[ styles.textLevelTwo, styles.linkItem ]}
       >
         Product Brochure
       </Text>
@@ -96,7 +96,7 @@ const App = () => (
       <TouchableOpacity style={styles.submitButton}>
         <Text
           numberOfLines={1}
-          style={[ styles.textLevelThree, styles.submitText ]}
+          style={[ styles.textLevelTwo, styles.submitText ]}
         >
           Apply Now
         </Text>
@@ -110,16 +110,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#C4C4C4',
     flex: 1
   },
+  textLevelOne: {
+    color: '#000000',
+    fontWeight: 'bold',
+    fontSize: 18,
+    lineHeight: 21
+  },
+  textLevelTwo: {
+    color: 'rgba(40, 51, 66, 0.6)',
+    fontWeight: 'bold',
+    fontSize: 14,
+    lineHeight: 17
+  },
   pageTitleContainer: {
     marginTop: 20,
     marginHorizontal: 100
   },
   pageTitle: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    lineHeight: 21,
-    textAlign: 'center',
-    color: '#000000'
+    textAlign: 'center'
   },
   pageImageContainer: {
     flexDirection: 'row',
@@ -133,18 +141,16 @@ const styles = StyleSheet.create({
   },
   middleTextContainer: {
     marginTop: -42,
-    marginHorizontal: 100,
+    marginHorizontal: 80,
     marginBottom: 42,
     paddingVertical: 10,
-    paddingHorizontal: 50,
+    paddingHorizontal: 40,
     backgroundColor: '#ED1B2E',
     borderRadius: 12,
     overflow: 'hidden'
   },
   middleText: {
     color: '#FFFFFF',
-    fontSize: 18,
-    lineHeight: 21,
     textAlign: 'center'
   },
   textListItem: {
@@ -160,18 +166,8 @@ const styles = StyleSheet.create({
     left: 19,
     top: 6
   },
-  textLevelTwo: {
-    color: '#000000',
-    fontWeight: 'bold',
-    fontSize: 18,
-    lineHeight: 21,
+  listTextTitle: {
     marginBottom: 9
-  },
-  textLevelThree: {
-    color: 'rgba(40, 51, 66, 0.6)',
-    fontWeight: 'bold',
-    fontSize: 14,
-    lineHeight: 17
   },
   footerContainer: {
     marginLeft: 24,
